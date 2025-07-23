@@ -1,0 +1,612 @@
+body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3c8775;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+.logo {
+    height: 55px;
+    margin-right: 10px;
+}
+
+.text-container h1 {
+    margin: 0;
+    font-size: 1.05em;
+    color: #ffffff;
+}
+
+.text-container p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+}
+
+nav ul li {
+    margin-left: 33px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+ul li.active a {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+main {
+    margin-top: 80px;
+    flex: 1 0 auto;
+}
+
+.vision-mission, .history, .community-info {
+    background-color: #e0f7f9;
+    padding: 20px;
+    text-align: justify;
+}
+
+.vision-mission h2, .history h2, .community-info h2 {
+    text-align: center;
+    color: #0F7050;
+}
+
+.history p, .community-info p {
+    color: #000;
+    font-weight: 500;
+}
+
+.vision-mission .card p, .community-info .card p {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.vision-mission .card2 p {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #0F7050;
+}
+
+.card p {
+    margin: 10px 0 0;
+    color: #000;
+    text-align: justify;
+}
+
+.card2 {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card2 h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #0F7050;
+}
+
+.card2 p {
+    margin: 10px 0 0;
+    color: #000;
+}
+
+.org-chart {
+    padding: 20px;
+    text-align: center;
+}
+
+.org-chart h2 {
+    color: #0F7050;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chart-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+    color: #0F7050;
+    margin: 0 0 10px;
+    font-size: 1.1em;
+}
+
+.chart-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.location {
+    padding: 20px;
+    text-align: center;
+}
+
+.location h2 {
+    color: #0F7050;
+    margin-bottom: 20px;
+}
+
+.location-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-box, .map-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.map-img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #3c8775;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section h3 {
+    margin: 0 0 10px;
+    font-size: 1em;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 0.7em;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #7ae2cf;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 0.95em;
+}
+
+.accessibility {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accessibility-icon {
+    height: 20px;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 0px;
+    z-index: 10;
+    margin-left: auto;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #2E7D32;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #205723;
+}
+
+.scroll-to-top.show {
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 960px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 250px;
+        height: 100vh;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    nav ul.active {
+        display: flex;
+        transform: translateX(0);
+        top: 60px;
+        height: calc(100vh - 60px);
+        z-index: 1001;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: justify;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+        padding: 10px;
+        display: block;
+        color: #000000;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .vision-mission, .history, .community-info {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.3em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        height: 50px;
+    }
+
+    .text-container h1 {
+        font-size: 0.95em;
+    }
+
+    .text-container p {
+        font-size: 0.75em;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+
+    .vision-mission, .history, .community-info {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.85em;
+    }
+
+    .chart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .org-chart h2, .location h2, .community-info h2 {
+        font-size: 1.3em;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-section h3 {
+        font-size: 0.9em;
+    }
+
+    .footer-section p {
+        font-size: 0.65em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .logo {
+        height: 45px;
+    }
+
+    .text-container h1 {
+        font-size: 0.9em;
+    }
+
+    .text-container p {
+        font-size: 0.7em;
+    }
+
+    main {
+        margin-top: 90px;
+    }
+
+    .vision-mission, .history, .community-info {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .card2 h2 {
+        font-size: 1.2em;
+    }
+
+    .card2 p {
+        font-size: 0.9em;
+    }
+
+    .history h2, .community-info h2 {
+        font-size: 1.2em;
+    }
+
+    .history p, .community-info p {
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    .org-chart h2, .location h2 {
+        font-size: 1.2em;
+    }
+
+    .footer-section h3 {
+        font-size: 0.85em;
+    }
+
+    .footer-section p {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .logo {
+        height: 40px;
+    }
+
+    .text-container h1 {
+        font-size: 0.85em;
+    }
+
+    .text-container p {
+        font-size: 0.65em;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .vision-mission, .history, .community-info  {
+        padding: 8px;
+    }
+
+    .vision-mission .card h2 {
+        font-size: 1.2em;
+    }
+
+    .vision-mission .card p {
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    .vision-mission .card2 h2 {
+        font-size: 1.2em;
+    }
+
+    .vision-mission .card2 p {
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 8px 0;
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+        font-weight: 500    ;
+    }
+
+    .community-info .card h2{
+        font-size: 1.2em;
+    }
+
+    .community-info .card p {
+        font-size: 0.9em;
+        font-weight: 500 
+    }
+
+    .org-chart, .location {
+        padding: 15px;
+    }
+
+    .org-chart h2, .location h2, .community-info h2 {
+        font-size: 1.1em;
+    }
+
+    .info-box, .map-box {
+        padding: 15px;
+    }
+
+    .footer-section h3 {
+        font-size: 0.8em;
+    }
+
+    .footer-section p {
+        font-size: 0.55em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.75em;
+    }
+}
+
+/* Add blur effect to the background when menu is active */
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open main,
+body.menu-open footer {
+    filter: blur(5px);
+}
+
+header {
+    filter: none;
+}
