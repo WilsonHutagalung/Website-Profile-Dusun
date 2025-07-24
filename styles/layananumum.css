@@ -462,6 +462,65 @@ footer {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .logo {
+        height: 35px;
+    }
+
+    .text-container h1 {
+        font-size: 0.8em;
+    }
+
+    .text-container p {
+        font-size: 0.6em;
+    }
+
+    main {
+        margin: 70px 5px 0 5px;
+        padding: 10px;
+    }
+
+    .hero {
+        height: 6vh;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .service-card {
+        padding: 5px;
+    }
+
+    .service-card img {
+        height: 80px;
+    }
+
+    .service-card h3 {
+        font-size: 0.8em;
+    }
+
+    .service-card p {
+        font-size: 0.6em;
+    }
+
+    .footer-section h3 {
+        font-size: 0.75em;
+    }
+
+    .footer-section p {
+        font-size: 0.5em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7em;
+    }
+}
+
 /* Add blur effect to the background when menu is active */
 body.menu-open {
     overflow: hidden;

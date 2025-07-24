@@ -24,6 +24,7 @@ header {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 80px;
 }
 
 .logo-container {
@@ -420,6 +421,63 @@ footer {
 
     .footer-bottom p {
         font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        height: 35px;
+    }
+
+    .text-container h1 {
+        font-size: 0.8em;
+    }
+
+    .text-container p {
+        font-size: 0.6em;
+    }
+
+    main {
+        margin-top: 70px;
+    }
+
+    .main-content {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card article p {
+        font-size: 0.9em;
+    }
+
+    .hero {
+        height: 6vh;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
+    }
+
+    .footer-section h3 {
+        font-size: 0.75em;
+    }
+
+    .footer-section p {
+        font-size: 0.5em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7em;
     }
 }
 

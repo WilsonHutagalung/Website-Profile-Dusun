@@ -28,6 +28,7 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
+    height: 80px;
 }
 
 header.scrolled {
@@ -132,7 +133,6 @@ header.scrolled nav ul li a {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
 }
-
 
 .hero {
     height: 100%; /* Mengisi seluruh tinggi background-container */
@@ -309,8 +309,8 @@ header {
     nav ul.active {
         display: flex;
         transform: translateX(0);
-        top: 60px;
-        height: calc(100vh - 60px);
+        top: 80px; /* Adjusted to start below the header height */
+        height: calc(100vh - 80px); /* Adjusted to account for header height */
         z-index: 1001;
     }
 
@@ -696,6 +696,97 @@ header {
 
     .map-section p {
         font-size: 0.9em;
+    }
+
+    header {
+        background-color: #3c8775;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        height: 35px;
+    }
+
+    .text-container h1 {
+        font-size: 0.8em;
+    }
+
+    .text-container p {
+        font-size: 0.6em;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero h3 {
+        font-size: 1.1em;
+    }
+
+    .welcome-section {
+        padding: 5px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .profile-text h2 {
+        font-size: 1.1em;
+    }
+
+    .profile-text p {
+        font-size: 0.85em;
+    }
+
+    .video-profile-section {
+        padding: 5px;
+    }
+
+    .video-profile-section h2 {
+        font-size: 1.1em;
+    }
+
+    .video-container iframe {
+        height: 250px;
+    }
+
+    .map-section {
+        padding: 5px;
+    }
+
+    .map-section h2 {
+        font-size: 1.1em;
+    }
+
+    .map-section p {
+        font-size: 0.85em;
+    }
+
+    .map-img {
+        max-width: 100%;
+    }
+
+    .footer-section h3 {
+        font-size: 0.75em;
+    }
+
+    .footer-section p {
+        font-size: 0.5em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7em;
     }
 
     header {

@@ -19,6 +19,7 @@ header {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 80px;
 }
 
 .logo-container {
@@ -148,7 +149,6 @@ main {
     color: #000;
 }
 
-
 .org-chart {
     padding: 20px;
     text-align: center;
@@ -230,16 +230,13 @@ main {
 
 .boundary-left, .boundary-right {
     width: 48%;
-    
 }
 
 .boundary-left .lintang, .boundary-right .lintang {
     padding-bottom: 20px;
-    
 }
 
 .boundary p {
-    /* margin: 5px 0; */
     margin-bottom: -10px;
     color: #333;
     font-size: 1.15em;
@@ -250,7 +247,7 @@ main {
     font-weight: 700;
 }
 
-.info-box .info-box-detail{
+.info-box .info-box-detail {
     font-size: 1.4em;
     color: #333;
     margin-top: 10px;
@@ -260,29 +257,28 @@ main {
     display: flex;
     font-size: 1.4em;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align text to the left */
-    padding: 5px 0; /* Reduced padding to lift text */
-    height: 60px; /* Fixed height to control vertical space */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 0;
+    height: 60px;
     position: relative;
-    border-bottom: 2px solid #ccc; /* Move underline here */
+    border-bottom: 2px solid #ccc;
 }
 
 .data-row p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
     display: flex;
-    align-items: center; /* Center text vertically within the flex */
-    height: 100%; /* Match the cell height */
-    transform: translateY(-5px); /* Slight upward shift */
+    align-items: center;
+    height: 100%;
+    transform: translateY(-5px);
 }
 
 .data-row span {
     font-size: 1em;
     font-weight: 400;
     color: #333;
-    margin-left: 5px; /* Space between label and value */
+    margin-left: 5px;
 }
-
 
 .map-box {
     background: white;
@@ -296,7 +292,7 @@ main {
 }
 
 .map-img {
-    max-width: 515px; /* Thumbnail size to match image */
+    max-width: 515px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -438,8 +434,8 @@ footer {
     nav ul.active {
         display: flex;
         transform: translateX(0);
-        top: 60px;
-        height: calc(100vh - 60px);
+        top: 80px; /* Adjusted to start below the header height */
+        height: calc(100vh - 80px); /* Adjusted to account for header height */
         z-index: 1001;
     }
 
@@ -462,9 +458,8 @@ footer {
     .vision-mission, .history, .community-info {
         padding: 15px;
     }
-    
 
-    .card h2 ,.card2 h2, .org-chart h2, .card-location h2 {
+    .card h2, .card2 h2, .org-chart h2, .location h2 {
         font-size: 1.3em;
     }
 
@@ -476,7 +471,7 @@ footer {
         font-size: 0.9em;
     }
 
-    .data-row p{
+    .data-row p {
         font-size: 0.9em;
     }
 
@@ -484,20 +479,16 @@ footer {
         max-width: 450px;
         height: 363px;
     }
-
-
-    
-    
 }
 
 @media screen and (max-width: 768px) {
     * {
-        box-sizing: border-box; /* Apply to all elements to include padding/borders in width */
+        box-sizing: border-box;
     }
 
     body {
-        overflow-x: hidden; /* Prevent horizontal scrolling at the body level */
-        margin: 0; /* Remove default margins */
+        overflow-x: hidden;
+        margin: 0;
         padding: 0;
     }
 
@@ -515,13 +506,13 @@ footer {
 
     main {
         margin-top: 100px;
-        width: 100%; /* Ensure main takes full viewport width */
-        padding: 0 10px; /* Add minimal padding to avoid content touching edges */
+        width: 100%;
+        padding: 0 10px;
     }
 
     .vision-mission, .history, .community-info {
         padding: 10px;
-        width: 100%; /* Ensure cards fit within main */
+        width: 100%;
     }
 
     .card h2 {
@@ -535,14 +526,14 @@ footer {
     .chart-container {
         flex-direction: column;
         align-items: center;
-        width: 100%; /* Contain chart container */
-        overflow-x: hidden; /* Prevent image overflow */
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .chart-card {
         width: 70%;
         margin-bottom: 15px;
-        max-width: 100%; /* Ensure it doesn't exceed container */
+        max-width: 100%;
     }
 
     .org-chart h2, .location h2, .community-info h2 {
@@ -552,8 +543,8 @@ footer {
     .location-details {
         flex-direction: column;
         align-items: center;
-        width: 100%; /* Contain location details */
-        overflow-x: hidden; /* Prevent overflow from map or info */
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .info-box, .map-box {
@@ -571,14 +562,14 @@ footer {
 
     footer {
         padding: 15px;
-        width: 100%; /* Ensure footer fits viewport */
+        width: 100%;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 15px;
-        width: 100%; /* Contain footer content */
+        width: 100%;
     }
 
     .footer-section h3 {
@@ -593,6 +584,7 @@ footer {
         font-size: 0.85em;
     }
 }
+
 @media screen and (max-width: 580px) {
     .logo {
         height: 45px;
@@ -669,7 +661,7 @@ footer {
         margin-top: 80px;
     }
 
-    .vision-mission, .history, .community-info  {
+    .vision-mission, .history, .community-info {
         padding: 8px;
     }
 
@@ -702,16 +694,16 @@ footer {
 
     .card p {
         font-size: 0.9em;
-        font-weight: 500    ;
+        font-weight: 500;
     }
 
-    .community-info .card h2{
+    .community-info .card h2 {
         font-size: 1.2em;
     }
 
     .community-info .card p {
         font-size: 0.9em;
-        font-weight: 500 
+        font-weight: 500;
     }
 
     .org-chart, .location {
@@ -735,7 +727,7 @@ footer {
     }
 
     .map-img {
-        max-width: 300px; /* Adjust thumbnail size for smaller screens */
+        max-width: 300px;
     }
 
     .footer-section h3 {
@@ -748,6 +740,83 @@ footer {
 
     .footer-bottom p {
         font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        height: 35px;
+    }
+
+    .text-container h1 {
+        font-size: 0.9em;
+    }
+
+    .text-container p {
+        font-size: 0.6em;
+    }
+
+    main {
+        margin-top: 70px;
+        padding: 0 5px;
+    }
+
+    .vision-mission, .history, .community-info {
+        padding: 5px;
+    }
+
+    .vision-mission .card h2, .vision-mission .card2 h2, .history .card h2, .community-info .card h2 {
+        font-size: 1em;
+    }
+
+    .vision-mission .card p, .vision-mission .card2 p, .history .card p, .community-info .card p {
+        font-size: 0.8em;
+    }
+
+    .chart-card {
+        width: 90%;
+    }
+
+    .org-chart h2, .location h2, .community-info h2 {
+        font-size: 1em;
+    }
+
+    .location-details {
+        padding-bottom: 20px;
+    }
+
+    .info-box, .map-box {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .boundary p {
+        font-size: 0.7em;
+    }
+
+    .info-box .info-box-detail {
+        font-size: 1.1em;
+    }
+
+    .data-row p {
+        font-size: 0.7em;
+    }
+
+    .map-box .map-img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .footer-section h3 {
+        font-size: 0.75em;
+    }
+
+    .footer-section p {
+        font-size: 0.5em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7em;
     }
 }
 

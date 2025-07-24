@@ -549,6 +549,72 @@ footer {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .logo {
+        height: 35px;
+    }
+
+    .text-container h1 {
+        font-size: 0.8em;
+    }
+
+    .text-container p {
+        font-size: 0.6em;
+    }
+
+    main {
+        margin-top: 70px;
+        padding: 10px;
+    }
+
+    .hero {
+        height: 6vh;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
+    }
+
+    .hero h3 {
+        font-size: 1.2em;
+    }
+
+    .gallery {
+        padding: 5px;
+    }
+
+    .gallery-filter {
+        gap: 3px;
+    }
+
+    .filter-btn {
+        padding: 3px 6px;
+        font-size: 0.7em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 5px;
+    }
+
+    .gallery-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-section h3 {
+        font-size: 0.75em;
+    }
+
+    .footer-section p {
+        font-size: 0.5em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7em;
+    }
+}
+
 body.menu-open {
     overflow: hidden;
 }
