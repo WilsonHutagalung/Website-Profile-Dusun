@@ -148,6 +148,7 @@ main {
     color: #000;
 }
 
+
 .org-chart {
     padding: 20px;
     text-align: center;
@@ -416,6 +417,7 @@ footer {
 @media screen and (max-width: 960px) {
     .hamburger {
         display: flex;
+        margin-right: 10px;
     }
 
     nav ul {
@@ -460,17 +462,45 @@ footer {
     .vision-mission, .history, .community-info {
         padding: 15px;
     }
+    
 
-    .card h2 {
+    .card h2 ,.card2 h2, .org-chart h2, .card-location h2 {
         font-size: 1.3em;
     }
 
-    .card p {
+    .history .card p, .card2 p {
         font-size: 0.9em;
     }
+
+    .info-box-detail strong {
+        font-size: 0.9em;
+    }
+
+    .data-row p{
+        font-size: 0.9em;
+    }
+
+    .map-box img {
+        max-width: 450px;
+        height: 363px;
+    }
+
+
+    
+    
 }
 
 @media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box; /* Apply to all elements to include padding/borders in width */
+    }
+
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling at the body level */
+        margin: 0; /* Remove default margins */
+        padding: 0;
+    }
+
     .logo {
         height: 50px;
     }
@@ -485,10 +515,13 @@ footer {
 
     main {
         margin-top: 100px;
+        width: 100%; /* Ensure main takes full viewport width */
+        padding: 0 10px; /* Add minimal padding to avoid content touching edges */
     }
 
     .vision-mission, .history, .community-info {
         padding: 10px;
+        width: 100%; /* Ensure cards fit within main */
     }
 
     .card h2 {
@@ -502,11 +535,14 @@ footer {
     .chart-container {
         flex-direction: column;
         align-items: center;
+        width: 100%; /* Contain chart container */
+        overflow-x: hidden; /* Prevent image overflow */
     }
 
     .chart-card {
-        width: 100%;
+        width: 70%;
         margin-bottom: 15px;
+        max-width: 100%; /* Ensure it doesn't exceed container */
     }
 
     .org-chart h2, .location h2, .community-info h2 {
@@ -516,6 +552,8 @@ footer {
     .location-details {
         flex-direction: column;
         align-items: center;
+        width: 100%; /* Contain location details */
+        overflow-x: hidden; /* Prevent overflow from map or info */
     }
 
     .info-box, .map-box {
@@ -533,12 +571,14 @@ footer {
 
     footer {
         padding: 15px;
+        width: 100%; /* Ensure footer fits viewport */
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 15px;
+        width: 100%; /* Contain footer content */
     }
 
     .footer-section h3 {
@@ -553,7 +593,6 @@ footer {
         font-size: 0.85em;
     }
 }
-
 @media screen and (max-width: 580px) {
     .logo {
         height: 45px;
@@ -696,7 +735,7 @@ footer {
     }
 
     .map-img {
-        max-width: 60px; /* Adjust thumbnail size for smaller screens */
+        max-width: 300px; /* Adjust thumbnail size for smaller screens */
     }
 
     .footer-section h3 {

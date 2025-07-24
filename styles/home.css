@@ -288,6 +288,7 @@ header {
 @media screen and (max-width: 960px) {
     .hamburger {
         display: flex;
+        margin-right: 10px;
     }
 
     nav ul {

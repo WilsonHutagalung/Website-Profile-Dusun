@@ -319,6 +319,7 @@ footer {
 @media screen and (max-width: 960px) {
     .hamburger {
         display: flex;
+        margin-right: 10px;
     }
 
     nav ul {
@@ -373,8 +374,9 @@ footer {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
         gap: 15px;
+        margin-left: 20px;
     }
 }
 
@@ -390,7 +392,7 @@ footer {
     .text-container p {
         font-size: 0.75em;
     }
-
+    
     main {
         margin-top: 80px;
     }
@@ -417,8 +419,9 @@ footer {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
         gap: 12px;
+        margin-left: 60px;
     }
 
     footer {
@@ -475,8 +478,10 @@ footer {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
         gap: 10px;
+        margin-left: 0px;
+        
     }
 
     .footer-section h3 {
