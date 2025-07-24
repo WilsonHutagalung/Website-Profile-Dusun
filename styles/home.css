@@ -265,7 +265,7 @@ header {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #2E7D32;
+    background-color: #0F7050;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -512,7 +512,7 @@ header {
 .profile-text h2 {
     margin: 0;
     font-size: 2em;
-    color: #2E7D32;
+    color: #0F7050;
 }
 .profile-text p {
     margin: 5px 0;
@@ -520,6 +520,11 @@ header {
     color: #000000;
     font-weight: 500;
     text-align: justify; /* Mengatur weight menjadi 500 untuk teks sambutan */
+}
+
+.profile-text .profile-name {
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 /* New styles for the video profile section */
@@ -535,7 +540,7 @@ header {
 .video-profile-section h2 {
     margin: 0 0 20px 0;
     font-size: 2em;
-    color: #2E7D32;
+    color: #0F7050;
 }
 
 .video-container {
@@ -563,7 +568,7 @@ header {
 .map-section h2 {
     margin: 0 0 20px 0;
     font-size: 2em;
-    color: #2E7D32;
+    color: #0F7050;
 }
 
 .map-section p {
@@ -597,7 +602,7 @@ header {
     padding: 10px 20px;
     font-size: 1em;
     color: #ffffff;
-    background-color: #2E7D32;
+    background-color: #0F7050;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -718,7 +723,7 @@ header {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #2E7D32;
+    background-color: #0F7050;
     color: #ffffff;
     border: none;
     border-radius: 50%;

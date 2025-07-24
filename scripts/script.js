@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Pendidikan": [
             { src: "/assets/galeri/Pendidikan/Day 2-MPLS.jpg", alt: "MPLS" },
             { src: "/assets/galeri/Pendidikan/Day 2-MPLS(1).jpg", alt: "MPLS" },
-            { src: "/assets/galeri/Pendidikan/Day 2-MPLS(2).jpg", alt: "MPLS" }
+            { src: "/assets/galeri/Pendidikan/Day 2-MPLS(2).jpg", alt: "MPLS" },
+            { src: "/assets/galeri/Pendidikan/Anak Sekolah.jpg", alt: "SD" }
         ],
         "Perekonomian": [],
         "Perkebunan": [
