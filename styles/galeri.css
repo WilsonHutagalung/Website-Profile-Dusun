@@ -549,7 +549,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 40px) {
     .logo {
         height: 35px;
     }

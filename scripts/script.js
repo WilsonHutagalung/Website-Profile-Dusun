@@ -4,27 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryGrid = document.getElementById('gallery-grid');
+    const mapButtons = document.querySelectorAll('.map-button'); // Tambahkan selektor untuk tombol peta
 
-    
     // Define category-to-image mapping manually
     const imageCategories = {
         "all": [],
         "Kesehatan": [
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu.jpg", alt: "Posyandu Bunga Rosela" },            
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(1).jpg", alt: "Posyandu Bunga Rosela" },            
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(2).jpg", alt: "Posyandu Bunga Rosela" },            
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(3).jpg", alt: "Posyandu Bunga Rosela" },                       
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(5).jpg", alt: "Posyandu Bunga Rosela" },            
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(6).jpg", alt: "Posyandu Bunga Rosela" },            
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(7).jpg", alt: "Posyandu Bunga Rosela" },            
-            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(8).jpg", alt: "Posyandu Bunga Rosela" },            
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu.jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(1).jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(2).jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(3).jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(5).jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(6).jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(7).jpg", alt: "Posyandu Bunga Rosela" },
+            { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu(8).jpg", alt: "Posyandu Bunga Rosela" },
         ],
         "Pariwisata": [
             { src: "/assets/galeri/Pariwisata/Hutan-mangrove.jpg", alt: "Mangrove" }
         ],
-        "Lingkungan": [,
-        { src: "/assets/galeri/Lingkungan/Penanaman dan Budidaya Mangrove.jpg", alt: "Penanaman dan Budidaya Mangrove" },
-        { src: "/assets/galeri/Lingkungan/Penanaman dan Budidaya Mangrove (1).jpg", alt: "Penanaman dan Budidaya Mangrove" },
+        "Lingkungan": [
+            { src: "/assets/galeri/Lingkungan/Penanaman dan Budidaya Mangrove.jpg", alt: "Penanaman dan Budidaya Mangrove" },
+            { src: "/assets/galeri/Lingkungan/Penanaman dan Budidaya Mangrove (1).jpg", alt: "Penanaman dan Budidaya Mangrove" },
         ],
         "Olahraga": [
             { src: "/assets/galeri/Olahraga/Bermain Voli.jpg", alt: "Bermain Voli Bersama Warga" },
@@ -42,24 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: "/assets/galeri/Perkebunan/Kebun RT 21 (1).jpg", alt: "Berkebun di Kebun Pak RT 21" },
             { src: "/assets/galeri/Perkebunan/Kebun RT 21 (2).jpg", alt: "Berkebun di Kebun Pak RT 21" }
         ],
-        "SeniBudaya": [], // Changed from "Seni Budaya"
+        "SeniBudaya": [],
         "Kemasyrakatan": [
             { src: "/assets/galeri/Kemasyrakatan/Makan Bersama.jpg", alt: "Makan Bersama Kader Posyandu dan Kepala Dusun" },
-            { src: "/assets/galeri/Kemasyrakatan/Menyambut 10 Muharam.jpg", alt: "Menyambut 10 Muhamaram" },
-            { src: "/assets/galeri/Kemasyrakatan/Mencari Kerang Bersama Warga Teluk Lombok.jpg", alt: "Menyambut 10 Muhamaram" },
+            { src: "/assets/galeri/Kemasyrakatan/Menyambut 10 Muharam.jpg", alt: "Menyambut 10 Muharam" },
+            { src: "/assets/galeri/Kemasyrakatan/Mencari Kerang Bersama Warga Teluk Lombok.jpg", alt: "Mencari Kerang Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti.jpg", alt: "Kerja Bakti Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(2).jpg", alt: "Kerja Bakti Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(3).jpg", alt: "Kerja Bakti Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(4).jpg", alt: "Kerja Bakti Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(5).jpg", alt: "Kerja Bakti Bersama Warga" },
-        ], // Changed from "Sosial dan Masyarakat"
+        ],
         "Pemerintah": [],
         "Teknologi": [],
     };
 
     // Cache for gallery items
     const galleryCache = new Map();
-    let currentCategory = null; // Initialize as null to force initial render
+    let currentCategory = null;
 
     // Preload all images
     function preloadImages() {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.src = imageSrc;
         img.alt = altText || `Image from ${category}`;
-        img.loading = 'lazy'; // Optimize loading
+        img.loading = 'lazy';
         img.onload = () => console.log(`Image loaded: ${imageSrc}`);
         img.onerror = () => {
             img.src = '/assets/galeri/placeholder.jpg';
@@ -109,8 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to populate gallery grid
     function populateGallery(category) {
-        console.log(`Populating gallery for category: ${category}`); // Debug log
-        // Update active button state
+        console.log(`Populating gallery for category: ${category}`);
         filterButtons.forEach(btn => btn.classList.remove('active'));
         const activeButton = document.querySelector(`.filter-btn[data-category="${category}"]`);
         if (activeButton) {
@@ -119,15 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(`No button found for category: ${category}`);
         }
 
-        // Fade out gallery grid
         galleryGrid.style.opacity = '0';
         setTimeout(() => {
-            // Hide all gallery items and no-images message
             galleryGrid.querySelectorAll('.gallery-item, p').forEach(item => {
                 item.style.display = 'none';
             });
 
-            // Show no images message if applicable
             if (!hasImages(category)) {
                 let noImagesMessage = galleryGrid.querySelector('p');
                 if (!noImagesMessage) {
@@ -141,12 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Determine images to show
             let imagesToShow = category === 'all'
                 ? Object.values(imageCategories).flat()
                 : imageCategories[category] || [];
 
-            // Add images to gallery if not already in cache
             imagesToShow.forEach(image => {
                 const imageSrc = image.src || image;
                 const altText = image.alt || `Image from ${category}`;
@@ -160,13 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 galleryCache.get(imageSrc).style.display = 'block';
             });
 
-            // Fade in gallery grid
             setTimeout(() => {
                 galleryGrid.style.opacity = '1';
             }, 10);
 
             currentCategory = category;
-        }, 300); // Match with CSS transition duration
+        }, 300);
     }
 
     // Hamburger menu toggle
@@ -206,10 +199,23 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.stopPropagation();
             const category = button.getAttribute('data-category');
-            console.log(`Filter button clicked for category: ${category}`); // Debug log
+            console.log(`Filter button clicked for category: ${category}`);
             populateGallery(category);
         });
     });
+
+    // Add click event listeners to map buttons
+    if (mapButtons.length > 0) {
+        mapButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const action = button.getAttribute('data-action');
+                if (action === 'zoom-in') {
+                    // Redirect to the map website
+                    window.location.href = 'https://poorsuply.github.io/PETA-TELUK-LOMBOK';
+                }
+            });
+        });
+    }
 
     // Preload images and load "all" category by default
     preloadImages();
@@ -218,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
-    if (window.scrollY > 650) { // Ubah 50 sesuai kebutuhan, ini adalah titik scroll dalam pixel
+    if (window.scrollY > 650) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
@@ -244,7 +250,7 @@ document.getElementById("scrollToTop").addEventListener("click", function() {
 
 // Header scroll effect
 window.addEventListener("scroll", function() {
-    const header = document.getElementById("header");
+    const header = document.getElementById('header');
     if (window.pageYOffset > 50) {
         header.classList.add("scrolled");
     } else {
