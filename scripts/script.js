@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryGrid = document.getElementById('gallery-grid');
+    
     const mapButtons = document.querySelectorAll('.map-button'); // Tambahkan selektor untuk tombol peta
-
-    // Define category-to-image mapping manually
     const imageCategories = {
+        // Define category-to-image mapping manually
         "all": [],
         "Kesehatan": [
             { src: "/assets/galeri/Kesehatan/Kegiatan Posyandu.jpg", alt: "Posyandu Bunga Rosela" },
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Lingkungan": [
             { src: "/assets/galeri/Lingkungan/Penanaman dan Budidaya Mangrove.jpg", alt: "Penanaman dan Budidaya Mangrove" },
             { src: "/assets/galeri/Lingkungan/Penanaman dan Budidaya Mangrove (1).jpg", alt: "Penanaman dan Budidaya Mangrove" },
+            { src: "/assets/galeri/Lingkungan/Bersih Pantai.jpg", alt: "Bersih Pantai" },
         ],
         "Olahraga": [
             { src: "/assets/galeri/Olahraga/Bermain Voli.jpg", alt: "Bermain Voli Bersama Warga" },
@@ -34,13 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: "/assets/galeri/Pendidikan/Day 2-MPLS.jpg", alt: "MPLS" },
             { src: "/assets/galeri/Pendidikan/Day 2-MPLS(1).jpg", alt: "MPLS" },
             { src: "/assets/galeri/Pendidikan/Day 2-MPLS(2).jpg", alt: "MPLS" },
-            { src: "/assets/galeri/Pendidikan/Anak Sekolah.jpg", alt: "SD" }
+            { src: "/assets/galeri/Pendidikan/Anak Sekolah.jpg", alt: "SD" },
+            { src: "/assets/galeri/Pendidikan/Anak SD.jpg", alt: "SD" },
+            { src: "/assets/galeri/Pendidikan/Anak SD (1).jpg", alt: "SD" },
+            { src: "/assets/galeri/Pendidikan/Hasil Karya Anak SD.jpg", alt: "SD" },
+            { src: "/assets/galeri/Pendidikan/Kegiatan Pramuka.jpg", alt: "SD" },
+            { src: "/assets/galeri/Pendidikan/Upacara.jpg", alt: "SD" },
+            { src: "/assets/galeri/Pendidikan/MPLS.jpg", alt: "SD" }
         ],
         "Perekonomian": [],
         "Perkebunan": [
             { src: "/assets/galeri/Perkebunan/Kebun RT 21.jpg", alt: "Berkebun di Kebun Pak RT 21" },
             { src: "/assets/galeri/Perkebunan/Kebun RT 21 (1).jpg", alt: "Berkebun di Kebun Pak RT 21" },
-            { src: "/assets/galeri/Perkebunan/Kebun RT 21 (2).jpg", alt: "Berkebun di Kebun Pak RT 21" }
+            { src: "/assets/galeri/Perkebunan/Kebun RT 21 (2).jpg", alt: "Berkebun di Kebun Pak RT 21" },
+            { src: "/assets/galeri/Perkebunan/Berkebun.jpg", alt: "Berkebun di Kebun Pak RT 21" }
         ],
         "SeniBudaya": [],
         "Kemasyrakatan": [
@@ -52,19 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(3).jpg", alt: "Kerja Bakti Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(4).jpg", alt: "Kerja Bakti Bersama Warga" },
             { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(5).jpg", alt: "Kerja Bakti Bersama Warga" },
+            { src: "/assets/galeri/Kemasyrakatan/Kerja Bakti(6).jpg", alt: "Kerja Bakti Bersama Warga" },
+            { src: "/assets/galeri/Kemasyrakatan/Membersihkan Gedung Serbaguna.jpg", alt: "Kerja Bakti Bersama Warga" },
+            { src: "/assets/galeri/Kemasyrakatan/Membersihkan Gedung Serbaguna(2).jpg", alt: "Kerja Bakti Bersama Warga" },
+            { src: "/assets/galeri/Kemasyrakatan/Sosialisasi Program Kerja individu.jpg", alt: "Sosialisasi Program Kerja individu" },
+            { src: "/assets/galeri/Kemasyrakatan/Sosialisasi Program Kerja Individu (1).jpg", alt: "Sosialisasi Program Kerja individu" },
+            { src: "/assets/galeri/Kemasyrakatan/Sosialisasi Kegiatan Program Kerja Individu(3).jpg", alt: "Sosialisasi Program Kerja individu" },
+            { src: "/assets/galeri/Kemasyrakatan/Sosialiasi Proker.jpg", alt: "Sosialisasi Program Kerja" },
+
         ],
         "Pemerintah": [],
         "Teknologi": [],
     };
 
     // Cache for gallery items
-    const galleryCache = new Map();
     let currentCategory = null;
+    const galleryCache = new Map();
 
     // Preload all images
     function preloadImages() {
-        const allImages = Object.values(imageCategories).flat().map(item => item.src || item);
         allImages.forEach(imageSrc => {
+            const allImages = Object.values(imageCategories).flat().map(item => item.src || item);
             const img = new Image();
             img.src = imageSrc;
             img.onload = () => console.log(`Image preloaded: ${imageSrc}`);
@@ -204,14 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add click event listeners to map buttons
     if (mapButtons.length > 0) {
+        // Add click event listeners to map buttons
         mapButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const action = button.getAttribute('data-action');
                 if (action === 'zoom-in') {
-                    // Redirect to the map website
                     window.location.href = 'https://poorsuply.github.io/PETA-TELUK-LOMBOK';
+                    // Redirect to the map website
                 }
             });
         });
