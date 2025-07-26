@@ -82,24 +82,24 @@ main {
     flex: 1 0 auto;
 }
 
-.vision-mission, .history, .community-info {
+.vision-mission, .history, .community-info, .challenges-needs {
     background-color: #e0f7f9;
     padding: 20px;
     text-align: justify;
 }
 
-.vision-mission h2, .history h2, .community-info h2 {
+.vision-mission h2, .history h2, .community-info h2, .challenges-needs h2 {
     text-align: center;
     color: #0F7050;
     font-size: 2em;
 }
 
-.history p, .community-info p {
+.history p, .community-info p, .challenges-needs p {
     color: #000;
     font-weight: 500;
 }
 
-.vision-mission .card p, .community-info .card p {
+.vision-mission .card p, .community-info .card p, .challenges-needs p {
     font-weight: 500;
     font-size: 1em;
 }
@@ -187,13 +187,6 @@ main {
     display: block;
     margin: 0 auto;
 }
-
-/* .location {
-    padding: 20px;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-} */
 
 .location h2 {
     color: #0F7050;
@@ -409,6 +402,53 @@ footer {
     display: block;
 }
 
+/* Challenges Section */
+.challenges-needs {
+    background-color: #e0f7f9;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+.challenges-needs h2 {
+    color: #0F7050;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.challenge-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.challenge-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.challenge-item p {
+    margin: 0;
+    color: #000;
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+}
+
+.challenge-item strong {
+    font-size: 1.1em;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 960px) {
     .hamburger {
@@ -448,23 +488,31 @@ footer {
         font-size: 1.1em;
         padding: 10px;
         display: block;
-        color: #000000;
+        color: #000000; /* Mengubah warna teks menjadi hitam untuk kontras */
     }
 
     main {
         margin-top: 80px;
     }
 
-    .vision-mission, .history, .community-info {
+    .vision-mission, .history, .community-info, .challenges-needs {
         padding: 15px;
     }
 
-    .card h2, .card2 h2, .org-chart h2, .location h2 {
+    .card h2, .card2 h2, .org-chart h2, .location h2, .challenges-needs h2 {
         font-size: 1.3em;
     }
 
-    .history .card p, .card2 p {
+    .history .card p, .card2 p, .challenges-needs .challenge-item p {
         font-size: 0.9em;
+    }
+
+    .challenge-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .challenge-item strong {
+        font-size: 1em;
     }
 
     .info-box-detail strong {
@@ -510,7 +558,7 @@ footer {
         padding: 0 10px;
     }
 
-    .vision-mission, .history, .community-info {
+    .vision-mission, .history, .community-info, .challenges-needs {
         padding: 10px;
         width: 100%;
     }
@@ -536,8 +584,12 @@ footer {
         max-width: 100%;
     }
 
-    .org-chart h2, .location h2, .community-info h2 {
+    .org-chart h2, .location h2, .community-info h2, .challenges-needs h2 {
         font-size: 1.3em;
+    }
+
+    .challenge-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .location-details {
@@ -602,7 +654,7 @@ footer {
         margin-top: 90px;
     }
 
-    .vision-mission, .history, .community-info {
+    .vision-mission, .history, .community-info, .challenges-needs {
         padding: 10px;
     }
 
@@ -622,17 +674,25 @@ footer {
         font-size: 0.9em;
     }
 
-    .history h2, .community-info h2 {
+    .history h2, .community-info h2, .challenges-needs h2 {
         font-size: 1.2em;
     }
 
-    .history p, .community-info p {
+    .history p, .community-info p, .challenges-needs .challenge-item p {
         font-size: 0.9em;
         font-weight: 500;
     }
 
     .org-chart h2, .location h2 {
         font-size: 1.2em;
+    }
+
+    .challenge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-item strong {
+        font-size: 0.9em;
     }
 
     .footer-section h3 {
@@ -661,24 +721,15 @@ footer {
         margin-top: 80px;
     }
 
-    .vision-mission, .history, .community-info {
+    .vision-mission, .history, .community-info, .challenges-needs {
         padding: 8px;
     }
 
-    .vision-mission .card h2 {
+    .vision-mission .card h2, .vision-mission .card2 h2, .history .card h2, .community-info .card h2, .challenges-needs h2 {
         font-size: 1.2em;
     }
 
-    .vision-mission .card p {
-        font-size: 0.9em;
-        font-weight: 500;
-    }
-
-    .vision-mission .card2 h2 {
-        font-size: 1.2em;
-    }
-
-    .vision-mission .card2 p {
+    .vision-mission .card p, .vision-mission .card2 p, .history .card p, .community-info .card p, .challenges-needs .challenge-item p {
         font-size: 0.9em;
         font-weight: 500;
     }
@@ -688,34 +739,16 @@ footer {
         margin: 8px 0;
     }
 
-    .card h2 {
-        font-size: 1.2em;
-    }
-
-    .card p {
-        font-size: 0.9em;
-        font-weight: 500;
-    }
-
-    .community-info .card h2 {
-        font-size: 1.2em;
-    }
-
-    .community-info .card p {
-        font-size: 0.9em;
-        font-weight: 500;
-    }
-
     .org-chart, .location {
         padding: 15px;
     }
 
-    .org-chart h2, .location h2, .community-info h2 {
-        font-size: 1.1em;
-    }
-
     .info-box, .map-box {
         padding: 10px;
+    }
+
+    .map-box {
+        margin: 40px ;
     }
 
     .boundary p {
@@ -726,8 +759,9 @@ footer {
         font-size: 1.2em;
     }
 
-    .map-img {
-        max-width: 300px;
+    .map-box img {
+        width: 365px;
+        height: 270px;
     }
 
     .footer-section h3 {
@@ -743,7 +777,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
     .logo {
         height: 35px;
     }
@@ -761,15 +795,15 @@ footer {
         padding: 0 5px;
     }
 
-    .vision-mission, .history, .community-info {
+    .vision-mission, .history, .community-info, .challenges-needs {
         padding: 5px;
     }
 
-    .vision-mission .card h2, .vision-mission .card2 h2, .history .card h2, .community-info .card h2 {
+    .vision-mission .card h2, .vision-mission .card2 h2, .history .card h2, .community-info .card h2, .challenges-needs h2 {
         font-size: 1em;
     }
 
-    .vision-mission .card p, .vision-mission .card2 p, .history .card p, .community-info .card p {
+    .vision-mission .card p, .vision-mission .card2 p, .history .card p, .community-info .card p, .challenges-needs .challenge-item p {
         font-size: 0.8em;
     }
 
@@ -777,7 +811,7 @@ footer {
         width: 90%;
     }
 
-    .org-chart h2, .location h2, .community-info h2 {
+    .org-chart h2, .location h2 {
         font-size: 1em;
     }
 
@@ -805,6 +839,10 @@ footer {
     .map-box .map-img {
         width: 350px;
         height: 250px;
+    }
+
+    .challenge-item strong {
+        font-size: 0.8em;
     }
 
     .footer-section h3 {
